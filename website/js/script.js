@@ -10,7 +10,7 @@ function handleSearch() {
     return;
   }
 
-  const url = `https://student-api-proxy.onrender.com/api/movie-database-alternative.p.rapidapi.com/?s=${searchTerm}&r=json&page=1`;
+const url = `https://student-api-proxy.onrender.com/api/movie-database-alternative.p.rapidapi.com/?s=${searchTerm}&r=json&page=1`;
 const options = {
   method: "GET",
   headers: {
@@ -25,6 +25,7 @@ fetch(url, options)
       console.log("API Response:", result);
 
       if (result.data && result.data.Search) {
+        const movieList = result.data.Search;
         displayMovies(result.data.Search);
       } else {
     resultContainer.innerHTML = "<p style='color: white;'>No movies found!</p>";
