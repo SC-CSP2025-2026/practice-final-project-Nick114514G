@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0%;
+
+    background: linear-gradient(180deg, #0723A7, #99221E);
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family:'Cedarville Cursive', cursive;
+    font-size: 3rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(red, green, blue, alpha);
+}
+
+.search-box {
+    margin: 30px 0;
+}
+
+input {
+    padding: 12px;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background-color: #ffcc00;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #ffdb4d;
+    transform: scale(1.05);
+}
+
+#resultContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;;
+}
+
+.movie-card:hover {
+    transform: translate(-10px);
+}
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.movie-card h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.4;
+}
